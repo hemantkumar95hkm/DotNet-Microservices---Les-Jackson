@@ -1,0 +1,18 @@
+name: dockercompose9427083286569417656
+services:
+  platformservice:
+    build:
+      context: D:\Hemant\Study Material\Projects\DotNet Microservices - Les Jackson\PlatformService
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: platformservice
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose9427083286569417656_default
